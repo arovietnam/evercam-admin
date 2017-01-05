@@ -1,0 +1,14 @@
+<% if @meta_datas.present? %>
+  <% @meta_datas.each do |meta_data| %>
+    <tr>
+      <td></td>
+      <td>
+        <%= link_to meta_data.camera.exid, camera_path(meta_data.camera) if meta_data.camera.present? %>
+      </td>
+      <td><%= meta_data.action %></td>
+      <td><%= meta_data.extra.deep_fetch('rtsp_url') { '' } unless meta_data.extra.nil? %></td>
+      <td><%= meta_data.extra.deep_fetch('ip') { '' } unless meta_data.extra.nil? %></td>
+      <td><%= meta_data.inserted_at.strftime('%a, %d %b %Y %H:%M:%S') %></td>
+    </tr>
+  <% end %>
+<% end %>

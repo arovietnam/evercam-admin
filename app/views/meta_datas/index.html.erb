@@ -1,0 +1,31 @@
+<!-- BEGIN CONTENT -->
+<div class="page-content-wrapper">
+  <div class="page-content" id="meta_datas-report">
+    <div id="merge-list-row" class="row dt-user-m">
+      <div class="col-md-12">
+        <table class="table table-striped table-bordered table-hover archive-datatables" id="meta_datatables">
+          <thead>
+            <tr role="row" class="heading">
+              <th name="order_username" class="sorting">Username</th>
+              <th name="order_camera" class="sorting">Camera</th>
+              <th name="order_type" class="sorting">Type</th>
+              <th name="order_url" class="sorting">Url</th>
+              <th name="order_ip" class="sorting">IP</th>
+              <th name="order_create_date" class="sorting">Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%=  render "meta_data" %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END CONTENT -->
+
+<script>
+  $(document).ready(function () {
+    window.initializeMetaDatas();
+  });
+</script>

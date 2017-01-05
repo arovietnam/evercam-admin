@@ -54,4 +54,6 @@ Rails.application.routes.draw do
   post "/admins/new" => "admins#create"
   delete "/admins/delete" => "admins#destroy"
   patch "/admins/update" => "admins#update"
+
+  get "/meta_datas" => "meta_datas#index"
 end
